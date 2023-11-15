@@ -5,12 +5,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>text - Hexo</title>
+    <title>爬虫小说 - Hexo</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="Fechin,"> 
-    
+    <meta name="description" content="import requestsimport reimport parsel
+模拟浏览器headers &amp;#x3D; {#用户代理 浏览器基本身份信息  ‘User-Agent’: ‘Mozilla&amp;,"> 
     <meta name="author" content="John Doe"> 
     <link rel="alternative" href="atom.xml" title="Hexo" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -18,16 +19,18 @@
     
     
     <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:title" content="text - Hexo"/>
-    
+    <meta name="twitter:title" content="爬虫小说 - Hexo"/>
+    <meta name="twitter:description" content="import requestsimport reimport parsel
+模拟浏览器headers &amp;#x3D; {#用户代理 浏览器基本身份信息  ‘User-Agent’: ‘Mozilla&amp;,"/>
     
     
     
     
     <meta property="og:site_name" content="Hexo"/>
     <meta property="og:type" content="object"/>
-    <meta property="og:title" content="text - Hexo"/>
-    
+    <meta property="og:title" content="爬虫小说 - Hexo"/>
+    <meta property="og:description" content="import requestsimport reimport parsel
+模拟浏览器headers &amp;#x3D; {#用户代理 浏览器基本身份信息  ‘User-Agent’: ‘Mozilla&amp;,"/>
     
 <link rel="stylesheet" href="/css/diaspora.css">
 
@@ -45,7 +48,7 @@
     <div class="bar" style="width: 0;"></div>
     <a class="iconfont icon-home image-icon" href="javascript:;" data-url="http://example.com"></a>
     <div title="播放/暂停" class="iconfont icon-play"></div>
-    <h3 class="subtitle">text</h3>
+    <h3 class="subtitle">爬虫小说</h3>
     <div class="social">
         <div>
             <div class="share">
@@ -60,14 +63,18 @@
     <div class="section">
         <div class="article">
     <div class='main'>
-        <h1 class="title">text</h1>
+        <h1 class="title">爬虫小说</h1>
         <div class="stuff">
             <span>九月 17, 2023</span>
             
 
         </div>
         <div class="content markdown">
-            
+            <p>import requests<br>import re<br>import parsel</p>
+<h1 id="模拟浏览器"><a href="#模拟浏览器" class="headerlink" title="模拟浏览器"></a>模拟浏览器</h1><p>headers &#x3D; {<br>#用户代理 浏览器基本身份信息<br>  ‘User-Agent’: ‘Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;109.0.0.0 Safari&#x2F;537.36 SLBrowser&#x2F;9.0.0.10191 SLBChan&#x2F;105’<br>}</p>
+<h1 id="请求链接"><a href="#请求链接" class="headerlink" title="请求链接"></a>请求链接</h1><p>url &#x3D; ‘<a target="_blank" rel="noopener" href="https://b.faloo.com/1365505_1.html'#">https://b.faloo.com/1365505_1.html&#39;#</a> 发送请求<br>response &#x3D; requests.get(url&#x3D;url, headers&#x3D;headers)<br>#把response.text转成可解析对象<br>selector &#x3D; parsel.Selector(response.text)<br>#提取标题<br>title &#x3D; selector.css(‘.nr_center .c_left .c_l_title h1::text’).get().split(‘   ‘)[-1]<br>#提取小说内容  把列表合并为字符串<br>content &#x3D; ‘\n’.join(selector.css(‘.nr_center .c_left .noveContent p::text’).getall())<br>#保存数据，保存到txt<br>with open(title+ ‘.txt’,mode&#x3D;’a’, encoding&#x3D;’utf-8’) as f:<br>    f.write(content)<br>print(title)</p>
+<p>print(content)</p>
+
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
                 <source type="audio/mpeg" src="">
